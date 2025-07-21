@@ -1,42 +1,57 @@
-# Rainfall Prediction and Mitigation System 🌧️
+---
+title: Rainy
+emoji: 🏆
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+license: mit
+---
 
-A machine learning-based application to predict rainfall using real-time weather data, visualize forecasts, and support proactive mitigation planning.
+# Rainfall prediction model
 
-## 🔍 Overview
-This project uses the **Open-Meteo API**, **FastAPI**, and **Matplotlib** to provide:
-- Rainfall prediction with over **80% accuracy**
-- Visualized trends of rainfall forecasts
-- Cloud deployment using **AWS EC2**
-- Handles over **500+ daily requests**
+## Getting Started
 
-## 🚀 Tech Stack
-- **Frontend**: HTML, CSS (Basic UI for results)
-- **Backend**: Python, FastAPI
-- **Machine Learning**: Sklearn
-- **APIs**: Open-Meteo Weather API
-- **Visualization**: Matplotlib
-- **Deployment**: AWS EC2
+### Prerequisites
 
-## 🧠 Features
-- Fetches real-time weather data
-- Predicts rainfall using trained ML model
-- Provides actionable insights and charts
-- Deployable as a REST API
+* [Python 3.11](https://www.python.org/downloads/) or later
 
-## 🛠️ Setup Instructions
 
-1. Clone the repository  
-   ```bash
-   git clone https://github.com/your-username/rainfall-prediction-mitigation-system.git
-   cd rainfall-prediction-mitigation-system
-2. Create virtual environment
+### Installation
 
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+1. Clone the repo
+```sh
+git clone https://github.com/AmanT0mar/Rainy-Model.git
+```
 
-3. Install dependencies
-   pip install -r requirements.txt
+2. Install python packages
+```sh
+pip install -r requirement.txt
+```
+or
+```sh
+python -m pip install -r requirement.txt
+```
+or
+```sh
+python3 -m pip install -r requirement.txt
+```
 
-4.Run the FastAPI server
-  uvicorn main:app --reload
-  
+### Usage
+
+1. To start the server, run the following command
+```sh
+uvicorn main:app --reload
+```
+
+## API endpoints
+
+* To get list of cities which are available for prediction
+```/city_list``` 
+
+* To get rainfall amount prediction using model
+```/rainfall/{city_name}```
+
+## License
+
+[LICENSE](LICENSE.txt)
